@@ -13,5 +13,11 @@
 2 - Commands: \
 `$ gcc -c lib/polynom.c`\
 `$ gcc main.c polynom.o -o app.out -lm`\
-`$ ./polynom`
+`$ ./polynom` \
+
+### Decimal to Binary project
+2 - Commands: \
+`$ gcc -c stack/stack.c`\
+`$ gcc main.c stack.o -o app.out`\
+`$ ./app.out decimal_number_as_parameter`
 
