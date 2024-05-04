@@ -1,6 +1,8 @@
 #ifndef ORDERED_LIST_H
 #define ORDERED_LIST_H
 
+#define EDUPLICATEDVAL -1
+
 typedef struct node {
     int info;
     struct node *next;
@@ -8,7 +10,7 @@ typedef struct node {
 
 void init_ordered_list(node_t **list);
 
-void insert_node(node_t **list, int info);
+int insert_node(node_t **list, int info);
 
 void print_list(node_t *list);
 

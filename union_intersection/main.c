@@ -58,12 +58,10 @@ node_t* list_intersection (node_t *L1, node_t *L2) {
 
     aux = L2;
 
-    errno = 0;
     while(aux != NULL) {
-        insert_node(&union_list, aux->info);
-        if(errno == -2) {
+        int err = insert_node(&union_list, aux->info);
+        if(err == EDUPLICATEDVAL) {
             insert_node(&intersection_list, aux->info);
-            errno = 0;
         }
         aux = aux->next;
     }
