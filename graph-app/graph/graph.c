@@ -37,7 +37,7 @@ graph_t *create_graph(int vertices) {
     return graph;
 }
 
-void insert_edge(graph_t *graph, int v1, int v2, int weight) {
+void insert_edge(graph_t *graph, vertex_t v1, vertex_t v2, int weight) {
     if(graph->adjacency[v1][v2] == 0) {
         graph->adjacency[v1][v2] = weight;
         graph->adjacency[v2][v1] = weight;
